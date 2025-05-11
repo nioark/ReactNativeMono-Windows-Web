@@ -9,7 +9,8 @@
     "start": "react-native start",
     "test": "jest",
     "web": "webpack-dev-server --config ./web/webpack.config.js --mode development",
-    "web:build": "webpack --config ./web/webpack.config.js --mode production"
+    "web:build": "webpack --config ./web/webpack.config.js --mode production",
+    "windows": "npx @react-native-community/cli run-windows"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -47,9 +48,17 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
+    "webpack-dev-server": "^5.2.1",
+    "metro-config": "^0.81.5"
   },
   "engines": {
     "node": ">=18"
+  },
+  "react-native-windows": {
+    "init-windows": {
+      "name": "nativeWeb",
+      "namespace": "nativeWeb",
+      "template": "old/uwp-cpp-app"
+    }
   }
 }
