@@ -80,8 +80,10 @@ export const Router: React.FC<RouterProps> = ({routes, defaultPath}) => {
 };
 
 // Optional fallback component
-const DefaultNotFound = () => (
-  <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-    <Text>Page not found</Text>
-  </View>
-);
+const DefaultNotFound = () => {
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Page not found</Text>
+    </View>
+  );
+};

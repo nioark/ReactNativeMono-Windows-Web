@@ -12,6 +12,11 @@ import {
 const Login = () => {
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
 
+  const handleLogin = () => {
+    // Add your login logic here
+    console.log('Login button pressed', SafeAreaView);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Welcome Back</Text>
@@ -41,7 +46,7 @@ const Login = () => {
           <Text style={styles.checkboxLabel}>Keep me logged in</Text>
         </Pressable>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Log In</Text>
         </TouchableOpacity>
       </View>
@@ -108,8 +113,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     paddingHorizontal: 10,
+    paddingVertical: 10,
     color: '#fff',
     backgroundColor: '#2a2a2a',
+    textAlignVertical: 'center',
   },
   button: {
     backgroundColor: '#FEE715FF',
