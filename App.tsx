@@ -1,25 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {Router} from './src/lib/Router';
+import {routes} from './src/Routes';
 
 const App = () => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, world!</Text>
-    </View>
-  );
+  return <Router routes={routes} defaultPath="/login" />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'purple',
-  },
-  text: {
-    fontSize: 20,
-    color: 'white',
-  },
-});
 
 export default App;
